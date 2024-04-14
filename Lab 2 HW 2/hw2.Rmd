@@ -1,0 +1,88 @@
+---
+title: "PSTAT 5LS HW 2 R WORK"
+author: "YOUR NAME GOES HERE IN QUOTES"
+date: "TODAY'S DATE GOES HERE IN QUOTES"
+output: pdf_document
+
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(stats250sbi)
+```
+
+# Background
+
+Pew Research Center reports annually on the social media use of U.S. adults. In January 2021, Pew reported that 86% of U.S. adults use YouTube. Does the percentage of U.S. adults who use YouTube differ now? A January 2024 report revealed that, in a random sample of 5461 U.S. adults, 4751 use YouTube. 
+
+## Calculate the Sample Proportion
+```{r phat, error = T}
+# Use this code chunk to calculate the sample proportion. Replace the words
+# "numerator" and "denominator" with the appropriate values in the code below 
+# and then run this chunk. The sample proportion will now be in your Environment.
+# Enter the resulting value as your answer to Question 7.2 on HW 2 on Gradescope.
+
+phat <- numerator/denominator
+phat
+
+```
+
+# Running the Simulation
+
+## Set the Seed
+Run the `setSeed` code chunk. No output will occur, but it will set the seed.
+
+```{r setSeed, error = T}
+set.seed(15)
+```
+
+## Generating the Simulations
+
+```{r simulate, error = T}
+# Use this code chunk to run 500 repetitions of the simulation. Replace the
+# word "proportion" with the hypothesized proportion from Question 7.1 of the
+# homework assignment. Replace the word "draws" with the number of times we 
+# draw a poker chip. Note that there will not be output, but that `sim2` will
+# now appear in your Environment.
+
+sim2 <- simulate_chance_model(chanceSuccess = proportion,
+numDraws = draws,
+numRepetitions = 500)
+
+```
+
+
+## Make a Histogram
+
+```{r histogram, error = T}
+# Run this code chunk to create a histogram of the simulated results with a
+# vertical line at the observed sample proportion, phat. You do not need to
+# change anything in this code chunk. Just run it.
+
+phat <- 4751/5461
+hist(sim2, 
+     main = "Histogram of 500 Simulation Results",
+     xlab = "Simulated Proportion of U.S. Adults Who Use YouTube in 2024", 
+     labels = TRUE)
+abline(v = phat, col = "red")
+
+```
+
+## Calculate the p-value
+
+The p-value depends on the direction in the alternative hypothesis. 
+
+- When we have a less than sign (<) in the alternative hypothesis, the estimated p-value will be the area in the left tail of the simulated distribution (the number of simulations at or below the value of our sample statistic). We calculate this as `sum((name of simulation) <= phat) / (number of repetitions of the simulation)`
+- When we have a greater than sign (>) in the alternative hypothesis, the estimated p-value will be the area in the right tail of the simulated distribution (the number of simulations at or above the value of our sample statistic). We calculate this as `sum((name of simulation) >= phat) / (number of repetitions of the simulation)`
+- When we have a not equal to sign ($\neq$) in the alternative hypothesis, the estimated p-value will be the area in both tails of the simulated distribution. It's tough to describe this in words, so I'm going to put the code for this question in the following code chunk. All you need to do is run the code chunk.
+
+```{r pvalue, error = T}
+# Run this code chunk to calculate the estimate p-value and enter the result 
+# for `pvalue` as your answer to Question 7.4 of HW 2 on Gradescope. 
+
+phat <- 4751/5461
+pvalue <- (sum(sim2 <= (0.86 - abs(phat - 0.86))) + sum(sim2 >= (0.86 + abs(phat - 0.86))))/500
+pvalue
+
+```
+
