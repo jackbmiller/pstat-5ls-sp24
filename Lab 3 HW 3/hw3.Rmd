@@ -1,0 +1,54 @@
+---
+title: "PSTAT 5LS HW 3 R WORK"
+author: "YOUR NAME GOES HERE IN QUOTES"
+date: "TODAY'S DATE GOES HERE IN QUOTES"
+output: pdf_document
+
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(stats250sbi)
+```
+
+## Heights of 10-year-old Children
+Heights of 10-year-old children, regardless of sex, closely follow a normal distribution with mean 55 inches and standard deviation 6 inches.
+
+The following chunks can be used for you to calculate the answers to this question in the homework. (Hint: You have examples of using `pnorm()` and `qnorm()` in Lab 3 and in Slide Set 4.)
+
+
+```{r}
+# Use this chunk to find the probability that a randomly chosen 10-year-old is
+## shorter than 48 inches 
+
+
+
+```
+
+
+```{r}
+# Use this chunk to find the probability that a randomly chosen 10-year-old is
+## between 60 and 65 inches 
+
+
+
+```
+
+
+```{r}
+# Use this chunk to find the height cutoff for "very tall" if the tallest 
+## 10% of 10-year-olds are considered "very tall"
+
+
+
+```
+
+
+```{r}
+# The height requirement for Batman the Ride at Six Flags Magic Mountain is 54
+## inches. Use this chunk to find the proportion of 10-year-olds cannot go on this
+## ride
+
+
+
+```

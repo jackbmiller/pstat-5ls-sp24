@@ -1,0 +1,6 @@
+"0","pnorm(q = 240, mean = 222, sd = 37, lower.tail = FALSE) - "
+"0","  pnorm(q = 200, mean = 222, sd = 37, lower.tail = FALSE)"
+"1","[1]"
+"1"," -0.4106316"
+"1","
+"
