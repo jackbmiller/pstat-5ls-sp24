@@ -1,0 +1,3 @@
+"0","sim1 <- simulate_chance_model(chanceSuccess = 0.67, "
+"0","                              numDraws = 480, "
+"0","                              numRepetitions = 500)"

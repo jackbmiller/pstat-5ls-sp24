@@ -1,0 +1,59 @@
+---
+title: "PSTAT 5LS HW 4"
+author: "YOUR NAME GOES HERE - KEEP THE QUOTES"
+date: "TODAY'S DATE GOES HERE - KEEP THE QUOTES"
+output: pdf_document
+---
+
+Be sure to run the `setup` chunk below so that you have the `prop_test()` function available.
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(stats250sbi)
+```
+
+Recall from section that if you want to use R to run a hypothesis test for $p$, you will use the `prop_test()` function. The arguments needed are 
+
+- `x` the number of successes in the sample
+- `n` the sample size
+- `p` the hypothesized value for the population proportion
+- `alternative` one of `less`, `two.sided`, or `greater` to match the direction in the alternative hypothesis
+
+If you want to use R to calculate a confidence interval for $p$, you will also use the `prop_test()` function. The arguments needed are 
+
+- `x` the number of successes in the sample
+- `n` the sample size
+- `conf.level` the confidence level as a decimal
+
+**Notes:**
+
+- If you only want to run a hypothesis test, don't include the `conf.level` argument in `prop_test()` (you must include the `p` and `alternative` arguments)
+- If you only want to calculate a confidence interval, don't include the `p` and `alternative` arguments (you must include the `conf.level` argument)
+
+You can use the following chunks to use R for your calculations in HW 4. Just be sure to input the arguments and values as appropriate. You can look back to the Lab 4 slides and your Lab 4 notes for examples.
+
+```{r}
+
+
+```
+
+```{r}
+
+
+```
+
+```{r}
+
+
+```
+
+```{r}
+
+
+```
+
+```{r}
+
+
+```
+

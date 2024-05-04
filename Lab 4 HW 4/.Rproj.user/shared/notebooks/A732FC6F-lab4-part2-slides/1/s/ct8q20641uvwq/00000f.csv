@@ -1,0 +1,3 @@
+"0","hist(sim1, "
+"0","     main = ""Histogram of 500 Simulation Results"","
+"0","     xlab = ""Simulated proportion of U.S households with at least one pet"")"
